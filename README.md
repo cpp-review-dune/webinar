@@ -1,1 +1,9 @@
-.
+-. Introducción, presentación del libro
+-. Presentación de Dune y su relación con los modelos matemáticos
+-. Relación con los otros proyectos, Dumux, Opm, Fenics, otros...
+-. Páginas de los proyectos y de las posibilidades
+-. Conceptos básicos de Dune
+-._ c++
+-._ python
+-. Ejemplos, completamente desarrollado.
+-. Códigos
