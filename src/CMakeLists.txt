@@ -1,1 +1,6 @@
-add_latex_document(SOURCE dune-webinar.tex RCFILE .latexmkrc)
+project(webinar)
+cmake_minimum_required(VERSION 3.8)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR})
+include(UseLatexMk)
+add_subdirectory("doc")
+message("Felicitaciones")
