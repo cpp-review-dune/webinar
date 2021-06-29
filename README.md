@@ -7,3 +7,15 @@
 -._ python
 -. Ejemplos, completamente desarrollado.
 -. Códigos
+
+```bib
+@online{Dune,
+  author = {},
+  date = {2021-06-26},
+  title = {What is DUNE},
+  url = {https://dune-project.org/about/dune},
+  urldate = {2021-06-26},
+  keywords = {online},
+  year = {2021},
+}
+```
