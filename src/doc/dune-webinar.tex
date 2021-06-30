@@ -3,36 +3,29 @@
 \begin{document}
 
 {
-	\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{duneslides-logo}}
-	\begin{frame}[plain]
-	\end{frame}
+\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{duneslides-logo}}
+\begin{frame}[plain]
+	\frametitle{\secname}
+\end{frame}
 }
 
 \frame[plain,noframenumbering]{\titlepage}
 
+\section{Introducción/Presentación del libro}
+
 \begin{frame}
-	\frametitle{Objetivos de esta introdución}
-	A number of advanced.
-	\begin{itemize}
-		\item Correr los \href{https://github.com/orgs/cpp-review-dune/packages}{imágenes prediseñadas} con el programa \lstinline{docker} en sistemas tipo Unix.
-		\item Crear una malla con \lstinline{gmsh} a través de la API (C/C++, Python, Julia).
-		\item Realizar los ejemplos resueltos del \textsc{Dune book}.
-	\end{itemize}
+	\frametitle{\secname}
+	A.
 \end{frame}
 
+\section{DUNE Numerics Project}
+\subsection{Introducción}
+
 \begin{frame}
-	\frametitle{Conociendo el sistema operativo \href{https://archlinux.org}{Arch Linux}}
+	\frametitle{\secname}
+	\framesubtitle{\subsecname}
 
-	Es una distribución GNU/Linux de propósito general, desarrollada\footnote{El líder del proyecto es \href{https://wiki.archlinux.org/title/User:Anthraxx}{\texttt{Anthraxx}}, desarrollador alemán del kernel \href{https://github.com/anthraxx/linux-hardened}{\texttt{linux-hardened}}.} independientemente para procesadores x86-64, que se adhiere a los principios de simplicidad, modernidad, pragmatismo, centrado en usuarios y versatilidad.
-
-	\
-
-	Proporciona las últimas versiones estables de la mayoría del software siguiendo el modelo de \href{https://en.wikipedia.org/wiki/Rolling\_release}{lanzamiento continuo}, no existen versiones como en Ubuntu 20.04, 21.10, 22.04, etc.
-
-	\
-
-	Arch está respaldado por \lstinline{pacman}, un gestor de paquetes ligero, sencillo y rápido, que permite actualizar todo el sistema con una orden.
-	Los scripts \href{https://wiki.archlinux.org/title/PKGBUILD}{PKGBUILD} aportados por la comunidad para la elaboración desde las fuentes, como los módulos de DUNE, se encuentran en el \href{http://aur.archlinux.org}{\emph{Arch User Repository}}.
+	una caja de herramientas modular para la solución numérica de EDPs
 
 	\begin{table}[ht!]
 		\caption{Comparación de la línea de comando del gestión de software (fuente: \url{wiki.archlinux.org})}
@@ -56,28 +49,31 @@
 
 \end{frame}
 
+\subsection{Introducción}
+
 \begin{frame}
-	\frametitle{Filosofía de Arch}
+	\frametitle{\secname}
+	\framesubtitle{\subsecname}
 
 	\begin{description}
-		\item[Simplicidad]
+		\item[dune-common]
 			Es minimalista.
 			Se usa herramienta pequeñas que sigue la filosofía de UNIX, de modo que tengas una base muy pequeña que deje configurar la máquina de manera más cómoda para el usuario.
-		\item[Modernidad]
+		\item[dune-geometry]
 			Mantener la paquetería lo más actualizada posible sin sacrificar la estabilidad. Cuenta con los compiladores más actuales de \lstinline{gcc}, \lstinline{lualatex}, \lstinline{go}, etc.
-		\item[Pragmatismo]
-			La gran cantidad de paquetes y scripts de compilación en los diversos repositorios de Arch Linux ofrecen software gratuito y de código abierto para quienes lo prefieren, así como paquetes de software propietario para quienes adoptan la funcionalidad por encima de la ideología.
-		\item[Centrado a las usuarias y usuarios]
-			La distribución está destinada a satisfacer las necesidades de quienes contribuyen a ella, en lugar de intentar atraer a tantos usuarios como sea posible.
-			Está dirigido al usuario competente de GNU/Linux, o cualquier persona con una actitud de hágalo usted mismo que esté dispuesto a leer la documentación y resolver sus propios problemas.
-			Se anima a todos los usuarios a participar y contribuir a la distribución.
-			Informar y ayudar a corregir errores es muy valioso y los parches que mejoran los paquetes o los proyectos principales son muy apreciados: los desarrolladores de Arch son voluntarios y los contribuyentes activos a menudo se convertirán en parte de ese equipo.
-		\item[Versatilidad]
 	\end{description}
 
 \end{frame}
 
+{
+\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{tutorial-9}}
+\begin{frame}[plain]
+\end{frame}
+}
+
 \begin{frame}
+	\frametitle{\secname}
+	\framesubtitle{\subsecname}
 
 	En esta ocasión hemos elegido Arch Linux como ambiente de trabajo porque tiene disponible una gran variedad de módulos de DUNE.
 	Es recomendable habilitar el repositorio \href{https://wiki.archlinux.org/title/Unofficial\_user\_repositories\#arch4edu}{\texttt{arch4edu}}\footnote{Administrado por Jingbei Li de la Universidad de Tsinghua.}.
