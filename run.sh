@@ -21,4 +21,4 @@ fi
 mkdir -p build && cd build
 cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release ../src
 make
-zathura doc/doc_dune-webinar_tex_source.pdf
+evince doc/doc_dune-webinar_tex_source.pdf

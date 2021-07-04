@@ -4,12 +4,47 @@
 
 {
 \usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{duneslides-logo}}
-\begin{frame}[plain]
-	\frametitle{\secname}
+\begin{frame}[plain,noframenumbering]
+
+	\color{c++reviewduneblue}
+	
+		\begin{flushleft}\bfseries\scshape\huge
+		Una introducción a la caja de herramientas Dune en
+		C+++/Python para la solución de modelos matemáticos
+		\end{flushleft}
+	
+	\
+
+	\
+
+	\
+
+	\
+
+	\
+
+	\
+
+	\begin{minipage}{0.47\textwidth}
+		\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=1.5cm]{alfaomega}
+		\caption*{\large\bfseries\textcolor{c++reviewduneblue}{Webinar Julio de 2021}}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\begin{flushright}\large\bfseries
+				Elaborado: John Jairo Leal Gómez\\
+				Universidad Nacional de Colombia\\
+				Carlos Alonso Aznarán Laos\\
+				Universidad Nacional de Ingeniería, Perú
+			\end{flushright}
+	\end{minipage}
+
 \end{frame}
 }
 
-\frame[plain,noframenumbering]{\titlepage}
+%\frame[plain,noframenumbering]{\titlepage}
 
 \section{Introducción/Presentación del libro}
 
@@ -25,35 +60,29 @@
 	\frametitle{\secname}
 	\framesubtitle{\subsecname}
 
-	una caja de herramientas modular para la solución numérica de EDPs
+	\begin{alertblock}{DUNE Numerics}
+	Es una caja de herramientas modular desarrollada en C++/Python para la solución numérica de EDPs, utilizando
+	métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
 
-	\begin{table}[ht!]
-		\caption{Comparación de la línea de comando del gestión de software (fuente: \url{wiki.archlinux.org})}
-		\centering\footnotesize
-		\begin{tabular}{cccp{50pt}cc}
-			\toprule
-			Acción             & Arch                    & Red Hat/Fedora          & Debian/Ubuntu                                          & SLES/openSUSE           & Gentoo
-			\tabularnewline
-			\midrule
-			Instala paquetes   & \lstinline|pacman -S|  & \lstinline|dnf install|  & \lstinline|apt install|                                 & \lstinline|zypper install|  & \lstinline|emerge -a|
-			\tabularnewline
-			Elimina paquetes   & \lstinline|pacman -Rs|  & \lstinline|dnf remove|  & \lstinline|apt remove|                                 & \lstinline|zypper remove|  & \lstinline|emerge -C|
-			\tabularnewline
-			Busca paquetes     & \lstinline|pacman -Ss| & \lstinline|dnf search| & \lstinline|apt search|                                & \lstinline|zypper search| & \lstinline|emerge -S|
-			\tabularnewline
-			Actualiza paquetes & \lstinline|pacman -Syu| & \lstinline|dnf upgrade| & \lstinline|apt update \&\&|\newline\lstinline|apt upgrade| & \lstinline|zypper update| & \lstinline|emerge -u world|
-			\tabularnewline
-			\bottomrule
-		\end{tabular}
-	\end{table}
+	\url{https://dune-project.org/about/dune}
+	\end{alertblock}
+
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=4cm]{dunedesign}
+	\end{figure}
 
 \end{frame}
 
-\subsection{Introducción}
-
+\subsection{El DUNE verso: módulos}
 \begin{frame}
 	\frametitle{\secname}
 	\framesubtitle{\subsecname}
+
+	\begin{figure}[ht!]
+	\centering
+	\includegraphics[height=5cm]{dependences.png}
+	\end{figure}
 
 	\begin{description}
 		\item[dune-common]
@@ -75,76 +104,26 @@
 	\frametitle{\secname}
 	\framesubtitle{\subsecname}
 
-	En esta ocasión hemos elegido Arch Linux como ambiente de trabajo porque tiene disponible una gran variedad de módulos de DUNE.
-	Es recomendable habilitar el repositorio \href{https://wiki.archlinux.org/title/Unofficial\_user\_repositories\#arch4edu}{\texttt{arch4edu}}\footnote{Administrado por Jingbei Li de la Universidad de Tsinghua.}.
+	
 \end{frame}
 
 \begin{frame}
-	\frametitle{Usando el emulador de terminal}
-	% Una consola es un display del sistema
-	% En todo lo que sigue, usaremos el shell \lstinline{bash}.
-
-	% GNU General Public License v2.0
-	% GNU Lesser General Public License v2.1
-	% BSD 3-Clause "New" or "Revised" License
-
-	% El terminal te da acceso al shell, que nos da acceso al sistema operativo subyacente.
-	% El shell, sabe interactuar entre el usuario y el sistema operativo.
-
-	% CLI Command Line Interface
+	
 \end{frame}
 
 \begin{frame}
-	% pwd
-	% El cursor parpadeante al final de la línea es donde se ingresan los comandos basados ​​en texto. Puede comenzar a experimentar con un comando simple, Imprimir directorio de trabajo (pwd), que muestra la carpeta actual en la que se encuentra en la pantalla. Escriba pwd y presione Entrar.
-
-	% Todos los comandos que ingresa funcionan de la misma manera: ingresa el comando, incluye cualquier parámetro para extender el uso del comando y presiona Enter para ejecutar la línea de comando que ingresó. Escribe en la Terminal: uname -a y presiona Enter. Esto muestra información del sistema con respecto a Mint
+	
 \end{frame}
 
-\begin{frame}[fragile]
-	\begin{lstlisting}
-    gitpod ~/dune-basics $ cd
-  \end{lstlisting}
-\end{frame}
+%\begin{frame}[fragile]
+%	\begin{lstlisting}
+%    gitpod ~/dune-basics $ cd
+%  \end{lstlisting}
+%\end{frame}
 
-%\lstinputpath{../../../sandbox}
-
-% \begin{frame}[fragile]
-% 	\frametitle{Classes}
-
-% 	\lstinputlisting[
-% 		caption={Programa \texttt{hello-linux.cc}.},
-% 		label=hello-linux.cc,
-% 	]{../../../sandbox/hello-linux.cc}
-
-
-% \end{frame}
-
-% \begin{frame}[fragile]
-% 	\frametitle{Classes}
-
-% 	\lstinputlisting[
-% 		caption={Programa \texttt{dune-basics.cc}.},
-% 		label=dune-basics.cc,
-% 	]{../../../src/dune-basics.cc}
-
-% \end{frame}
-
-% \begin{frame}[fragile]
-% 	\frametitle{Classes}
-
-% 	\lstinputlisting[
-% 		caption={Programa \texttt{dune-basics.cc}.},
-% 		label=dune-basics.cc,
-% 	]{../../../sandbox/dune-math-constants.cc}
-
-% \end{frame}
-%https://archlinux.org/logos/archlinux-icon-crystal-256.svg
 
 \begin{frame}
 	\frametitle{El comando \lstinline{duneproject}}
-	% https://gitlab.dune-project.org/core/dune-common/-/raw/master/bin/duneproject
-	Es un asistente en el lenguaje \lstinline{bash} que se encuentra en \lstinline{/usr/bin/duneproject}\ldots
 
 \end{frame}
 
@@ -175,11 +154,3 @@
 \end{frame}
 
 \end{document}
-%https://github.com/easybuilders/easybuild/wiki/EasyBuild-Tech-Talks-I%3A-Open-MPI
-% https://www.youtube.com/playlist?list=PLagFkXs2BczZO4B_I6YhuS4xOxlSPgZuT
-% https://www.youtube.com/playlist?list=PLagFkXs2BczZGsvnN7UAqd5LWfgOrat0v
-% https://www.youtube.com/playlist?list=PLZRRlbOTxTmAMASXs7mAFnKkFZ3ohefTF
-% https://www.youtube.com/playlist?list=PLZRRlbOTxTmBERH5Ov1kWhPlmOQAP04zi
-% https://www.youtube.com/playlist?list=PLZRRlbOTxTmCaBYeLHQyqMFyI6caKsVDd
-% https://www.youtube.com/playlist?list=PLZRRlbOTxTmB_gV8rLQ6N9KDX5po5eTay
-% https://www.youtube.com/playlist?list=PLZRRlbOTxTmCyLkmjWg0e8cNk6rONT-mk
