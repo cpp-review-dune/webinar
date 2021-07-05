@@ -1,0 +1,139 @@
+diff --git a/src/doc/dune-webinar.tex b/src/doc/dune-webinar.tex
+index b725923..2fd68ad 100644
+--- a/src/doc/dune-webinar.tex
++++ b/src/doc/dune-webinar.tex
+@@ -88,7 +88,7 @@
+ 	\framesubtitle{\subsecname}
+ 
+ 	\begin{alertblock}{Distributed and Unified Numerics Environment (DUNE)}
+-		Conjunto de bibliotecas C++/Python para la implementación de métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
++		Conjunto de bibliotecas modular en C++/Python para la implementación de métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
+ 		De código abierto bajo la licencia GNU General Public Licence 2.
+ 		Los binarios están en las distribuciones Linux Debian, Ubuntu (\href{https://launchpad.net/~opm/+archive/ubuntu/ppa}{PPA}) y OpenSUSE; y las recetas de compilación en freeBSD, Arch Linux.
+ 
+@@ -110,7 +110,7 @@
+ 
+ \end{frame}
+ 
+-\subsection{Módulos}
++\subsection{Dependencias de algunos módulos}
+ 
+ \begin{frame}
+ 	\frametitle{\secname}
+@@ -127,6 +127,8 @@
+ 
+ 			\
+ 
++			\
++
+ 			\dirtree{%
+ 				.1 dumux.
+ 				.2 dune-istl.
+@@ -156,6 +158,8 @@
+ 
+ 			\
+ 
++			\
++
+ 			\dirtree{%
+ 				.1 opm-models.
+ 				.2 opm-material.
+@@ -180,15 +184,16 @@
+ 	\end{figure}
+ 
+ 	\begin{description}
+-		\item[dune-common]
++		\item[dune-common] Clases fundamentales e infraestructura para la construcción del sistema.
+ 
+-		\item[dune-geometry]
++		\item[dune-geometry] Elementos de referencia, métodos de cuadratura y transformaciones geométricas.
+ 
+-		\item[dune-grid]
++		\item[dune-grid] Interfaces con las mallas (YasGrid, .), construcción y visualización.
+ 
+-		\item[dune-istl]
++		\item[dune-istl] Biblioteca de solucionadores iterativas de plantillas, clases genéricas de matrices/vectores dispersos, solucionadores
+ 
+-		\item[dune-localfunctions]
++
++		\item[dune-localfunctions] Interface genérica para funciones de elementos finitos.
+ 
+ 			%\item[dune-functions]
+ 
+@@ -196,55 +201,33 @@
+ 
+ \end{frame}
+ \section{DUNE: Course 2021 Heidelberg}
++\subsection{\url{https://dune-pdelab-course.readthedocs.io/en/latest/lectures/fem.html}}
+ \begin{frame}
+ 	\frametitle{\secname}
+-	\framesubtitle{Resumen }
+-	\url{https://dune-pdelab-course.readthedocs.io/en/latest/lectures/fem.html}
++	\framesubtitle{\subsecname}
+ 	\begin{figure}[ht!]
+ 		\centering
+ 		\includegraphics[height=8cm, width=12cm]{dune_course_2021}
+ 	\end{figure}
+ \end{frame}
++
+ {
+ \usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{tutorial-9}}
+ \begin{frame}[plain]
++	%\frametitle{\secname}
+ \end{frame}
+ }
+ 
+-
+ \begin{frame}[fragile]
+-	\frametitle{\secname}
++	%\frametitle{\secname}
+ 	\framesubtitle{Hola mundo de DUNE: C++}
+-\small{
+-\begin{python}
+-	#ifdef HAVE_CONFIG_H # include "config.h"
+-	#endif 	#include <iostream>
+-	#include <dune/common/parallel/mpihelper.hh> // An initializer of MPI
+-	#include <dune/common/exceptions.hh> // We use exceptions
+-	
+-	int main(int argc, char** argv)
+-	{
+-	  try{
+-		// Maybe initialize MPI
+-		Dune::MPIHelper& helper = Dune::MPIHelper::instance(argc, argv);
+-		std::cout << "Hello World! This is proyecto01." << std::endl;
+-		if(Dune::MPIHelper::isFake)
+-		  std::cout<< "This is a sequential program." << std::endl;
+-		else
+-		  std::cout<<"I am rank "<<helper.rank()<<" of "<<helper.size()
+-			<<" processes!"<<std::endl;
+-		return 0;
+-	  }
+-	  catch (Dune::Exception &e){
+-		std::cerr << "Dune reported error: " << e << std::endl;
+-	  }
+-	  catch (...){
+-		std::cerr << "Unknown exception thrown!" << std::endl;
+-	  }
+-	}
+-\end{python}
+-}
++
++	\lstinputlisting[
++		caption={Programa \texttt{hello-linux.cc}.},
++		label=hello-linux.cc,
++	]{hellodune.cc}
+ \end{frame}
++
+ \begin{frame}
+ 	\frametitle{\secname}
+ 	\framesubtitle{Jupyter-notebook: Python}
+@@ -261,8 +244,8 @@
+ 		\centering
+ 		\includegraphics[height=8cm, width=12cm]{cpp_review}
+ 	\end{figure}
+-
+ \end{frame}
++
+ \begin{frame}
+ 	\frametitle{\secname}
+ 	\framesubtitle{Imágenes Docker en Achlinux}
