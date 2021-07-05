@@ -7,12 +7,12 @@
 \begin{frame}[plain,noframenumbering]
 
 	\color{c++reviewduneblue}
-	
-		\begin{flushleft}\bfseries\scshape\huge
+
+	\begin{flushleft}\bfseries\scshape\huge
 		Una introducción a la caja de herramientas Dune en
-		C+++/Python para la solución de modelos matemáticos
-		\end{flushleft}
-	
+		C++/Python para la solución de modelos matemáticos
+	\end{flushleft}
+
 	\
 
 	\
@@ -27,18 +27,19 @@
 
 	\begin{minipage}{0.47\textwidth}
 		\begin{figure}[ht!]
-		\centering
-		\includegraphics[height=1.5cm]{alfaomega}
-		\caption*{\large\bfseries\textcolor{c++reviewduneblue}{Webinar Julio de 2021}}
+			\centering
+			\includegraphics[height=1.5cm]{alfaomega}
+			\caption*{\large\bfseries\textcolor{c++reviewduneblue}{Webinar Julio de 2021}}
 		\end{figure}
 	\end{minipage}
 	\begin{minipage}{0.5\textwidth}
 		\begin{flushright}\large\bfseries
-				Elaborado: John Jairo Leal Gómez\\
-				Universidad Nacional de Colombia\\
-				Carlos Alonso Aznarán Laos\\
-				Universidad Nacional de Ingeniería, Perú
-			\end{flushright}
+			Elaborado:\\
+			John Jairo Leal Gómez\\
+			Universidad Nacional de Colombia\\
+			Carlos Alonso Aznarán Laos\\
+			Universidad Nacional de Ingeniería, Perú
+		\end{flushright}
 	\end{minipage}
 
 \end{frame}
@@ -46,11 +47,37 @@
 
 %\frame[plain,noframenumbering]{\titlepage}
 
-\section{Introducción/Presentación del libro}
+\section{Presentación del libro}
+
+\begin{frame}
+	\frametitle{\secname}%\hspace{-1cm}
+	\begin{minipage}{0.47\textwidth}
+		\begin{figure}[ht!]
+			\centering
+			\includegraphics[height=7.7cm]{portada}
+		\end{figure}
+	\end{minipage}%\hspace{1cm}
+	\begin{minipage}{0.5\textwidth}
+		\textsc{\large Capítulos:}
+		\begin{enumerate}
+			\item Introducción a los números reales $\mathbb{R}$
+			\item Introducción a las funciones
+			\item La derivada
+			\item Modelamiento matemático
+			\item Anexos
+		\end{enumerate}
+	\end{minipage}
+
+\end{frame}
 
 \begin{frame}
 	\frametitle{\secname}
-	A.
+
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=7.7cm]{vida_cotidiana}
+	\end{figure}
+
 \end{frame}
 
 \section{DUNE Numerics Project}
@@ -60,36 +87,111 @@
 	\frametitle{\secname}
 	\framesubtitle{\subsecname}
 
-	\begin{alertblock}{DUNE Numerics}
-	Es una caja de herramientas modular desarrollada en C++/Python para la solución numérica de EDPs, utilizando
-	métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
+	\begin{alertblock}{Distributed and Unified Numerics Environment (DUNE)}
+		Conjunto de bibliotecas C++/Python para la implementación de métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
+		De código abierto bajo la licencia GNU General Public Licence 2.
+		Los binarios están en las distribuciones Linux Debian, Ubuntu (\href{https://launchpad.net/~opm/+archive/ubuntu/ppa}{PPA}) y OpenSUSE; y las recetas de compilación en freeBSD, Arch Linux.
 
-	\url{https://dune-project.org/about/dune}
+		\
+
+		Proyectos que emplean DUNE:
+		\begin{itemize}
+			\item \url{https://dune-project.org/about/dune}
+			\item \url{https://dumux.org}
+			\item \url{https://opm-project.org}
+			\item \url{https://www.zib.de/projects/kaskade7-finite-element-toolbox}
+		\end{itemize}
 	\end{alertblock}
 
 	\begin{figure}[ht!]
 		\centering
-		\includegraphics[height=4cm]{dunedesign}
+		\includegraphics[height=3cm]{dunedesign}
 	\end{figure}
 
 \end{frame}
 
+\subsection{Módulos}
+
+\begin{frame}
+	\frametitle{\secname}
+	\framesubtitle{\subsecname}
+
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\dirtree{%
+				.1 dune-fem.
+				.2 dune-grid.
+				.3 dune-geometry.
+				.4 dune-common.
+			}
+
+			\
+
+			\dirtree{%
+				.1 dumux.
+				.2 dune-istl.
+				.2 dune-localfunctions.
+				.2 vc.
+				.2 psurface.
+				.2 superlu.
+				.2 arpack++.
+				.2 suitesparse.
+				.2 dune-alugrid.
+				.2 dune-subgrid.
+				.2 fmt.
+				.2 opm-common.
+			}
+		\end{column}
+
+		\begin{column}{0.5\textwidth}
+			\dirtree{%
+				.1 opm-upscaling.
+				.2 opm-grid.
+				.3 opm-common.
+				.4 dune-grid.
+				.5 dune-geometry.
+				.4 dune-istl.
+				.4 boost.
+			}
+
+			\
+
+			\dirtree{%
+				.1 opm-models.
+				.2 opm-material.
+				.3 opm-common.
+				.4 dune-grid.
+				.5 dune-geometry.
+				.4 dune-istl.
+				.4 boost.
+			}
+		\end{column}
+	\end{columns}
+
+\end{frame}
 \subsection{El DUNE verso: módulos}
 \begin{frame}
 	\frametitle{\secname}
 	\framesubtitle{\subsecname}
 
 	\begin{figure}[ht!]
-	\centering
-	\includegraphics[height=5cm]{dependences.png}
+		\centering
+		\includegraphics[width=14.5cm]{dependences}
 	\end{figure}
 
 	\begin{description}
 		\item[dune-common]
-			Es minimalista.
-			Se usa herramienta pequeñas que sigue la filosofía de UNIX, de modo que tengas una base muy pequeña que deje configurar la máquina de manera más cómoda para el usuario.
+
 		\item[dune-geometry]
-			Mantener la paquetería lo más actualizada posible sin sacrificar la estabilidad. Cuenta con los compiladores más actuales de \lstinline{gcc}, \lstinline{lualatex}, \lstinline{go}, etc.
+
+		\item[dune-grid]
+
+		\item[dune-istl]
+
+		\item[dune-localfunctions]
+
+			%\item[dune-functions]
+
 	\end{description}
 
 \end{frame}
@@ -103,16 +205,6 @@
 \begin{frame}
 	\frametitle{\secname}
 	\framesubtitle{\subsecname}
-
-	
-\end{frame}
-
-\begin{frame}
-	
-\end{frame}
-
-\begin{frame}
-	
 \end{frame}
 
 %\begin{frame}[fragile]
@@ -122,8 +214,12 @@
 %\end{frame}
 
 
-\begin{frame}
-	\frametitle{El comando \lstinline{duneproject}}
+\begin{frame}[fragile]
+	\frametitle{\lstinline{dune-python}}
+
+\begin{python}
+from dune.common import FieldVector
+\end{python}
 
 \end{frame}
 
