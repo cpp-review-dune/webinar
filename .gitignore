@@ -297,3 +297,4 @@ TSWLatexianTemp*
 #*Notes.bib
 svg-inkscape
 build
+*.md~

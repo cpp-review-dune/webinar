@@ -29,7 +29,7 @@
 		\begin{figure}[ht!]
 			\centering
 			\includegraphics[height=1.5cm]{alfaomega}
-			\caption*{\large\bfseries\textcolor{c++reviewduneblue}{Webinar Julio de 2021}}
+			\caption*{\large\bfseries\textcolor{c++reviewduneblue}{Webinar 12 de Julio de 2021}}
 		\end{figure}
 	\end{minipage}
 	\begin{minipage}{0.5\textwidth}
@@ -46,7 +46,6 @@
 }
 
 %\frame[plain,noframenumbering]{\titlepage}
-
 \section{Presentación del libro}
 
 \begin{frame}
@@ -72,12 +71,10 @@
 
 \begin{frame}
 	\frametitle{\secname}
-
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[height=7.7cm]{vida_cotidiana}
 	\end{figure}
-
 \end{frame}
 
 \section{DUNE Numerics Project}
@@ -88,24 +85,106 @@
 	\framesubtitle{\subsecname}
 
 	\begin{alertblock}{Distributed and Unified Numerics Environment (DUNE)}
-
-Se hará una breve presentación de la caja de herramientas modular DUNE, biblioteca modular desarrollada en la universidad de Heildeberg Alemania en C++ y Python, para resolver ecuaciones diferenciales parciales utilizando métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos. Es un Software de código abierto bajo la licencia GNU General Public Licence 2, con binarios disponibles para las distribuciones Linux Debian, Ubuntu  (\href{https://launchpad.net/~opm/+archive/ubuntu/ppa}{PPA}) y OpenSUSE; y las recetas de compilación en freeBSD, Arch Linux. Se mostrará la estructura general,  proyectos basados en DUNE y algunas simulaciones de modelos matemáticos que incluyen éste tipo de ecuaciones, así como una implementación breve de DUNE.
-		\
-
-		Proyectos que emplean DUNE:
+		\note{Se hará una breve presentación de la caja de herramientas modular DUNE, biblioteca modular desarrollada en la universidad de Heildeberg Alemania en C++ y Python, para resolver ecuaciones diferenciales parciales utilizando métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.}
 		\begin{itemize}
-			\item \url{https://dune-project.org/about/dune}
-			\item \url{https://dumux.org}
-			\item \url{https://opm-project.org}
-			\item \url{https://www.zib.de/projects/kaskade7-finite-element-toolbox}
+			\item Software de código abierto bajo la licencia GNU General Public Licence 2.
+			\item Disponible en \href{https://github.com/dune-copasi/homebrew-tap}{macOS}, Linux (Debian, Ubuntu  (\href{https://launchpad.net/~opm/+archive/ubuntu/ppa}{PPA}), OpenSUSE y Arch Linux) y freeBSD.
+			      \note{Desarrollado con CMake, escrito en C++ con enlaces Python a través de pybind11.}
+			\item Conjunto de bibliotecas C++ con enlaces a Python.
+			\item Utilizado en la resolución de ecuaciones diferenciales parciales e implementación de métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
 		\end{itemize}
+		\note{Se mostrará la estructura general, proyectos basados en DUNE y algunas simulaciones de modelos matemáticos que incluyen éste tipo de ecuaciones, así como una implementación breve de DUNE.}
 	\end{alertblock}
+
+	\
 
 	\begin{figure}[ht!]
 		\centering
-		\includegraphics[height=3cm]{dunedesign}
+		\includegraphics[height=4cm]{dunedesign}
+		\caption{Tomado de \url{https://dune-project.org}}
 	\end{figure}
 
+\end{frame}
+
+\begin{frame}
+	\frametitle{\secname}
+	\framesubtitle{\subsecname}
+
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{alertblock}{Proyectos que emplean DUNE}
+				\begin{itemize}
+					\item \url{https://dune-project.org/about/dune}
+					\item \url{https://dumux.org}
+					\item \url{https://opm-project.org}
+					\item \url{https://www.zib.de/projects/kaskade7-finite-element-toolbox}
+				\end{itemize}
+			\end{alertblock}
+		\end{column}
+
+		\begin{column}{0.5\textwidth}
+			\begin{figure}[ht!]
+				\centering
+				\includegraphics[width=7cm]{blood_girke}
+				\caption{Tomado de \url{https://dune-project.org}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Curso de DUNE/PDELab (8/3/2021 - 12/3/2021)}
+
+\begin{frame}[fragile]
+	\frametitle{\secname}
+	\framesubtitle{\url{https://dune-pdelab-course.readthedocs.io}}
+
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=8cm]{dune_course_2021}
+	\end{figure}
+	\note{Cursos de DUNE anuales, lista de correo de preguntas y noticias}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{\secname}
+	\framesubtitle{Snippet en C++}
+	\lstinputlisting[caption={Programa \texttt{dune-basics.cc}.},label=dune-basics.cc,]{dune-basics.cc}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{\secname}
+	\framesubtitle{Snippet en Python}
+	\lstinputlisting[caption={Programa \texttt{dune-basics.cc}.},label=dune-basics.cc,]{dune-basics.cc}
+\end{frame}
+
+{
+\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{tutorial-9}}
+\begin{frame}[plain]
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{jupyter01}}
+\begin{frame}[plain]
+\end{frame}
+}
+\section{DUNE Latinoamérica}
+\begin{frame}
+	\frametitle{\secname}
+	\framesubtitle{Página para revisión de DUNE}
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=8cm, width=12cm]{cpp_review}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\secname}
+	\framesubtitle{Imágenes Docker en Achlinux}
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=8cm, width=12cm]{archiso}
+	\end{figure}
 \end{frame}
 
 \subsection{Módulos}
@@ -182,7 +261,12 @@ Se hará una breve presentación de la caja de herramientas modular DUNE, biblio
 	\end{figure}
 
 	\begin{description}
-		\item[dune-common] Clases fundamentales e infraestructura para la construcción del sistema.
+		\item[dune-common]
+
+		Clases fundamentales e infraestructura para la construcción del sistema.
+
+		\note{contiene las clases base usadas por todos los módulos de DUNE-modules. Provee algunas clases de infraestructura para depuración y manejo de excepciones así como una librería para manejar una matriz densa.
+and vectors.}
 
 		\item[dune-geometry] Elementos de referencia, métodos de cuadratura y transformaciones geométricas.
 
@@ -191,94 +275,8 @@ Se hará una breve presentación de la caja de herramientas modular DUNE, biblio
 		\item[dune-istl] Biblioteca de solucionadores iterativas de plantillas, clases genéricas de matrices/vectores dispersos, solucionadores
 
 		\item[dune-localfunctions] Interface genérica para funciones de elementos finitos.
-
-			%\item[dune-functions]
-
 	\end{description}
-
 \end{frame}
-\section{DUNE: Course 2021 Heidelberg}
-\begin{frame}[fragile]
-	\frametitle{\secname}
-	%\framesubtitle{}
-	\url{https://dune-pdelab-course.readthedocs.io/en/latest/lectures/fem.html}
-	\begin{figure}[ht!]
-		\centering
-		\includegraphics[height=8cm, width=12cm]{dune_course_2021}
-	\end{figure}
-\end{frame}
-{
-\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{tutorial-9}}
-\begin{frame}[plain]
-\end{frame}
-}
-
-
-\begin{frame}[fragile]
-	\frametitle{\secname}
-	\framesubtitle{Hola mundo de DUNE: C++}
-	\small{
-		\begin{python}
-			#ifdef HAVE_CONFIG_H # include "config.h"
-			#endif 	#include <iostream>
-			#include <dune/common/parallel/mpihelper.hh> // An initializer of MPI
-			#include <dune/common/exceptions.hh> // We use exceptions
-
-			int main(int argc, char** argv)
-			{
-					try{
-							// Maybe initialize MPI
-							Dune::MPIHelper& helper = Dune::MPIHelper::instance(argc, argv);
-							std::cout << "Hello World! This is proyecto01." << std::endl;
-							if(Dune::MPIHelper::isFake)
-							std::cout<< "This is a sequential program." << std::endl;
-							else
-							std::cout<<"I am rank "<<helper.rank()<<" of "<<helper.size()
-							<<" processes!"<<std::endl;
-							return 0;
-						}
-					catch (Dune::Exception &e){
-							std::cerr << "Dune reported error: " << e << std::endl;
-						}
-					catch (...){
-							std::cerr << "Unknown exception thrown!" << std::endl;
-						}
-				}
-		\end{python}
-	}
-\end{frame}
-\begin{frame}
-	\frametitle{\secname}
-	\framesubtitle{Jupyter-notebook: Python}
-	\begin{figure}[ht!]
-		\centering
-		\includegraphics[height=8cm, width=12cm]{jupyter01}
-	\end{figure}
-\end{frame}
-\section{DUNE Latinoamérica}
-\begin{frame}
-	\frametitle{\secname}
-	\framesubtitle{Página para revisión de DUNE}
-	\begin{figure}[ht!]
-		\centering
-		\includegraphics[height=8cm, width=12cm]{cpp_review}
-	\end{figure}
-
-\end{frame}
-\begin{frame}
-	\frametitle{\secname}
-	\framesubtitle{Imágenes Docker en Achlinux}
-	\begin{figure}[ht!]
-		\centering
-		\includegraphics[height=8cm, width=12cm]{archiso}
-	\end{figure}
-\end{frame}
-
-%\begin{frame}[fragile]
-%	\begin{lstlisting}
-%    gitpod ~/dune-basics $ cd
-%  \end{lstlisting}
-%\end{frame}
 
 \begin{frame}\transblindsvertical
 	\frametitle{Referencias}
@@ -307,3 +305,4 @@ Se hará una breve presentación de la caja de herramientas modular DUNE, biblio
 \end{frame}
 
 \end{document}
+%https://conan.iwr.uni-heidelberg.de/events/dune-course_2021/
