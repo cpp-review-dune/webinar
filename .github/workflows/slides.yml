@@ -37,7 +37,9 @@ jobs:
           run: |
             sudo -u aur yay -Syu texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber inkscape doxygen python-sphinx ttf-fira-code --needed --noconfirm
             sudo -u aur echo 'export PATH="/usr/bin/vendor_perl:$PATH"' >> /home/aur/.bashrc
-            cd /work/ && ./run.sh
+            cd /work/
+            ls -l
+            ./run.sh
 
       - name: Check pdf files
         run: |
