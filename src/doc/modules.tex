@@ -1,4 +1,35 @@
 \section{El DUNE verso: módulos}
+\subsection{Dependencias de algunos módulos}
+
+\begin{frame}
+	\frametitle{\secname}
+	\framesubtitle{\subsecname}
+
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=14.6cm]{dependences}
+		\caption{Tomado de \url{https://gitlab.com/dune-archiso/repository/dune-archiso-repository-pdelab-git/-/pipelines}}
+	\end{figure}
+
+	\begin{description}
+		\item[dune-common]
+
+			Clases fundamentales e infraestructura para la construcción del sistema.
+
+			\note{contiene las clases base usadas por todos los módulos de DUNE-modules. Provee algunas clases de infraestructura para depuración y manejo de excepciones así como una librería para manejar una matriz densa.
+				and vectors.}
+
+		\item[dune-geometry] Elementos de referencia, métodos de cuadratura y transformaciones geométricas.
+
+		\item[dune-grid] Interfaces con las mallas (ALUGrid, UGGrid, Alberta, YasGrid), construcción y visualización.
+
+		\item[dune-istl] Biblioteca de solucionadores iterativas de plantillas, clases genéricas de matrices/vectores dispersos, solucionadores
+
+		\item[dune-localfunctions]
+
+			Interface genérica para funciones de elementos finitos.
+	\end{description}
+\end{frame}
 
 \begin{frame}
 	\frametitle{\secname}
@@ -60,33 +91,4 @@
 		\end{column}
 	\end{columns}
 
-\end{frame}
-\subsection{Dependencias de algunos módulos}
-\begin{frame}
-	\frametitle{\secname}
-	\framesubtitle{\subsecname}
-
-	\begin{figure}[ht!]
-		\centering
-		\includegraphics[width=14.6cm]{dependences}
-	\end{figure}
-
-	\begin{description}
-		\item[dune-common]
-
-			Clases fundamentales e infraestructura para la construcción del sistema.
-
-			\note{contiene las clases base usadas por todos los módulos de DUNE-modules. Provee algunas clases de infraestructura para depuración y manejo de excepciones así como una librería para manejar una matriz densa.
-				and vectors.}
-
-		\item[dune-geometry] Elementos de referencia, métodos de cuadratura y transformaciones geométricas.
-
-		\item[dune-grid] Interfaces con las mallas (ALUGrid, UGGrid, Alberta, YasGrid), construcción y visualización.
-
-		\item[dune-istl] Biblioteca de solucionadores iterativas de plantillas, clases genéricas de matrices/vectores dispersos, solucionadores
-
-		\item[dune-localfunctions]
-
-			Interface genérica para funciones de elementos finitos.
-	\end{description}
 \end{frame}
