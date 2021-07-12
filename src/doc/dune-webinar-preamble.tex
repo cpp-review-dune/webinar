@@ -121,3 +121,12 @@
 }
 
 \newcommand{\MVAt}{{\usefont{U}{mvs}{m}{n}\symbol{`@}}}
+
+\providecommand{\interval}[1]{
+	\directlua{
+		local oldsumstr,sumstr = difference(#1)
+		tex.print("\string\\textbf{Time estimation}: " .. #1 .. " seconds." ..
+		"\string\\hfill" .. "$t\string\\in" .. "\string\\left[" ..
+				oldsumstr .. "," .. sumstr .. "\string\\right]" .. "$" .. " min.")
+	}
+}
