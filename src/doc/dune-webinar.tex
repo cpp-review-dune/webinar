@@ -13,18 +13,16 @@
 	\framesubtitle{\subsecname}
 
 	\begin{alertblock}{Distributed and Unified Numerics Environment (DUNE)}
-				\note{Título: ``Una introducción a la caja de herramientas DUNE en C++/Python 
-				para la solución de modelos matemáticos'' Se hará una breve presentación de 
-				la caja de herramientas modular DUNE, biblioteca modular desarrollada en la 
-				universidad de Heildeberg Alemania en C++ y Python, para resolver ecuaciones 
-				diferenciales parciales utilizando métodos basados en mallas, por ejemplo 
-				diferencias finitas, elementos finitos o volúmenes finitos. Es un Software 
-				de código abierto bajo la licencia GNU General Public Licence 2, con binarios
-				 disponibles para las distribuciones Mac, Linux Debian, Ubuntu y OpenSUSE; y 
-				 las recetas de compilación en freeBSD, Arch Linux. Se mostrará la estructura general,  
-				 algunos proyectos basados en DUNE y algunas simulaciones de modelos matemáticos 
-				 que incluyen éste tipo de ecuaciones y sus respectivas soluciones, 
-				 así como una implementación breve de DUNE.}
+		\note{
+			Título: ``Una introducción a la caja de herramientas DUNE en C++/Python
+			para la solución de modelos matemáticos''.
+			Se hará una breve presentación de  la caja de herramientas modular DUNE, biblioteca modular desarrollada en la  universidad de Heildeberg Alemania en C++ y Python, para resolver ecuaciones
+			diferenciales parciales utilizando métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
+
+			Es un software  de código abierto bajo la licencia GNU General Public Licence 2, con binarios disponibles para las distribuciones linux Debian, Ubuntu y OpenSUSE; y
+			las recetas de compilación en macOS, freeBSD, Arch Linux.
+			Se mostrará la estructura general, algunos proyectos basados en DUNE y algunas simulaciones de modelos matemáticos que incluyen éste tipo de ecuaciones y sus respectivas soluciones, así como una implementación breve de DUNE.
+		}
 		\begin{itemize}
 			\item
 
@@ -85,7 +83,16 @@
 			\end{figure}
 		\end{column}
 	\end{columns}
+	\note{
+		Presento las tres primeras páginas, la última versión estable de DUNE es la 2.7.1, pero la versión 2.8 está prevista para este año.
+
+		DumuX es un software basado en modelos, de la química, de los sueles.
+
+		Una característica de opm es que cuenta con sus propios visualizador de simulación llamado Resinsight.
+	}
 \end{frame}
+
+\input{modules}
 
 \section{Curso de DUNE/PDELab $2021$}
 
@@ -97,42 +104,67 @@
 		\centering
 		\includegraphics[height=8cm]{dune_course_2021}
 	\end{figure}
-	\note{Cursos de DUNE anuales, lista de correo de preguntas y noticias}
+	\note{
+		Cursos de DUNE anuales, lista de correo de preguntas y noticias.
+
+		Cuenta con nueve tutoriales.
+		El módulo se llama dune-pdelab-tutorials, \url{https://gitlab.dune-project.org/pdelab/dune-pdelab-tutorials}, es el sucesor de dune-grid-howto \url{https://gitlab.dune-project.org/core/dune-grid-howto}
+	}
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Snippet en C++}
 	\lstinputlisting[caption={Programa \texttt{dune-basics.cc}.},label=dune-basics.cc,]{dune-basics.cc}
-\end{frame}
+	\note{
+		Se muestra un código minimo de un programa basado en Dune.
+		La forma de trabajo es importar las clases con las directivas %\lstinline|#include <dune/modulo/cabecera.hh>|
 
-% \begin{frame}[fragile]
-% 	\frametitle{Snippet en Python}
-% 	\lstinputlisting[caption={Programa \texttt{dune-basics.cc}.},label=dune-basics.cc,]{dune-basics.cc}
-% \end{frame}
-
-{
-\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{jupyter01}}
-\begin{frame}[plain]
-	\note{Mostrar el artículo de Dune-Python https://arxiv.org/abs/1807.05252}
+		\url{https://www.dune-project.org/sphinx/content/sphinx/dune-fem/mcf_nb.html}
+		Es una simulación dinámica.
+	}
 \end{frame}
-}
 
 {
 \usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{tutorial-9}}
 \begin{frame}[plain]
+	\note{
+		Presentar el vídeo presenta la simulación de un flujo que obedece las ecuaciones de Navier Stokes, alrededor de un cilindro.
+	}
 \end{frame}
 }
 
-%\section{DUNE Latinoamérica}
+% % \begin{frame}[fragile]
+% % 	\frametitle{Snippet en Python}
+% % 	\lstinputlisting[caption={Programa \texttt{dune-basics.cc}.},label=dune-basics.cc,]{dune-basics.cc}
+% % \end{frame}
+
+{
+\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{jupyter01}}
+\begin{frame}[plain]
+	\note{
+		Mostrar el artículo de dune-Python \url{https://arxiv.org/abs/1807.05252}, página 11.
+		Los bindings de dune se encuentran en cada módulo, por ejemplo, dune-common, dune-geometry, dune-grid, dune-istl, etc, que depende de la instalación en C++ de dicho módulo.
+	}
+\end{frame}
+}
+% \section{Repositorios en GitHub: C++ review DUNE}
 
 {
 \usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{cpp_review}}
 \begin{frame}[plain]
+	\note{
+		Página para repasar el curso virtual de DUNE/PDELab en el que contamos con los siguientes repositorios:
+		\begin{itemize}
+			\item \url{https://cpp-review-dune.github.io/introductory-review}
+			      que contiene enlaces de interés y el enlace de acceso al grupo de Telegram. Además de otros cursos relacionados. Vídeos.
+			\item Portar diversos módulos de DUNE en Arch Linux.
+			\item La creación de imágenes Docker que permite la utilización de módulos específicos, incluidos la versión de Python, de manera periódica y automática, esto se puede ver en la sección de Actions en el repositorio introductory-review
+			\item Por otro lado, han estado adoptando la metodología de Git en un proyecto de la Universidad Nacional de Colombia.
+		\end{itemize}
+	}
 \end{frame}
 }
-
-%\framesubtitle{Página para revisión de DUNE}
-%\framesubtitle{Imágenes Docker en Achlinux}
+%  %\framesubtitle{Imágenes Docker en Achlinux}
 
 {
 \usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{archiso}}
@@ -140,7 +172,6 @@
 \end{frame}
 }
 
-\input{modules}
 \input{blbliography}
 \input{thanks}
 
