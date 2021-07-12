@@ -32,3 +32,5 @@ http://congress.cimne.com/icme2016/admin/files/filepaper/p72.pdf
 }
 ```
 https://conan.iwr.uni-heidelberg.de/events/dune-course_2021/
+https://tex.stackexchange.com/a/594533
+https://arxiv.org/pdf/1309.1783.pdf
