@@ -3,14 +3,17 @@
 \begin{document}
 
 {
-\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{duneslides-logo}}
+\usebackgroundtemplate{
+	\centering
+	\includegraphics[width=\paperwidth]{duneslides-logo}
+}
 \begin{frame}[plain,noframenumbering]
 
 	\color{c++reviewduneblue}
 
 	\begin{flushleft}\bfseries\scshape\huge
-		Una introducción a la caja de herramientas Dune en
-		C++/Python para la solución de modelos matemáticos
+		Una introducción a la caja de herramientas DUNE Numerics
+		para la solución de modelos matemáticos
 	\end{flushleft}
 
 	\
@@ -29,41 +32,68 @@
 		\begin{figure}[ht!]
 			\centering
 			\includegraphics[height=1.5cm]{alfaomega}
-			\caption*{\large\bfseries\textcolor{c++reviewduneblue}{Webinar 12 de Julio de 2021}}
+			\caption*{
+				\large
+				\bfseries
+				\textcolor{c++reviewduneblue}{Webinar 12 de Julio de 2021}
+			}
 		\end{figure}
 	\end{minipage}
 	\begin{minipage}{0.5\textwidth}
-		\begin{flushright}\large\bfseries
-			Elaborado:\\
+		\begin{flushright}
+			\large
+			\bfseries
+			Elaborado por:\\
 			John Jairo Leal Gómez\\
 			Universidad Nacional de Colombia\\
 			Carlos Alonso Aznarán Laos\\
 			Universidad Nacional de Ingeniería, Perú
 		\end{flushright}
 	\end{minipage}
-
 \end{frame}
 }
-
-%\frame[plain,noframenumbering]{\titlepage}
 \section{Presentación del libro}
 
 \begin{frame}
-	\frametitle{\secname}%\hspace{-1cm}
+	\frametitle{\secname}
 	\begin{minipage}{0.47\textwidth}
 		\begin{figure}[ht!]
 			\centering
 			\includegraphics[height=7.7cm]{portada}
 		\end{figure}
-	\end{minipage}%\hspace{1cm}
+	\end{minipage}
 	\begin{minipage}{0.5\textwidth}
-		\textsc{\large Capítulos:}
+		\textsc{\Large Capítulos:}
+
+		\
+
 		\begin{enumerate}
-			\item Introducción a los números reales $\mathbb{R}$
-			\item Introducción a las funciones
-			\item La derivada
-			\item Modelamiento matemático
-			\item Anexos
+			\item
+
+			      Introducción a los números reales $\mathbb{R}$.
+
+			      \
+
+			\item
+
+			      Introducción a las funciones.
+
+			      \
+
+			\item
+
+			      La derivada.
+
+			      \
+
+			\item
+
+			      Modelamiento matemático.
+
+			      \
+
+			\item
+			      Anexos.
 		\end{enumerate}
 	\end{minipage}
 
@@ -73,7 +103,7 @@
 	\frametitle{\secname}
 	\begin{figure}[ht!]
 		\centering
-		\includegraphics[height=7.7cm]{vida_cotidiana}
+		\includegraphics[height=7.8cm]{vida_cotidiana}
 	\end{figure}
 \end{frame}
 
@@ -85,23 +115,43 @@
 	\framesubtitle{\subsecname}
 
 	\begin{alertblock}{Distributed and Unified Numerics Environment (DUNE)}
-		\note{Se hará una breve presentación de la caja de herramientas modular DUNE, biblioteca modular desarrollada en la universidad de Heildeberg Alemania en C++ y Python, para resolver ecuaciones diferenciales parciales utilizando métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.}
+		\note{
+			Se hará una breve presentación de la caja de herramientas modular DUNE, biblioteca modular desarrollada en la universidad de Heildeberg Alemania en C++ y Python, para resolver ecuaciones diferenciales parciales utilizando métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
+		}
 		\begin{itemize}
-			\item Software de código abierto bajo la licencia GNU General Public Licence 2.
-			\item Disponible en \href{https://github.com/dune-copasi/homebrew-tap}{macOS}, Linux (Debian, Ubuntu  (\href{https://launchpad.net/~opm/+archive/ubuntu/ppa}{PPA}), OpenSUSE y Arch Linux) y freeBSD.
-			      \note{Desarrollado con CMake, escrito en C++ con enlaces Python a través de pybind11.}
-			\item Conjunto de bibliotecas C++ con enlaces a Python.
-			\item Utilizado en la resolución de ecuaciones diferenciales parciales e implementación de métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
-		\end{itemize}
-		\note{Se mostrará la estructura general, proyectos basados en DUNE y algunas simulaciones de modelos matemáticos que incluyen éste tipo de ecuaciones, así como una implementación breve de DUNE.}
-	\end{alertblock}
+			\item
 
-	\
+			      Software de código abierto bajo la licencia GNU General Public Licence 2~\gpllicense{}.
+
+			\item
+
+			      Disponible en
+			      \href{https://github.com/dune-copasi/homebrew-tap}{macOS}, \href{https://packages.debian.org/search?suite=sid&section=all&arch=any&searchon=sourcenames&keywords=dune-}{Debian}~\debian{},
+			      \href{https://launchpad.net/~opm/+archive/ubuntu/ppa}{Ubuntu}~\ubuntu{},
+			      \href{https://build.opensuse.org/search?search_text=dune-&search_for=2&name=1&attrib_type_id=}{openSUSE}~\opensuse{},
+			      \href{https://aur.archlinux.org/packages/?O=0&SeB=n&K=dune-&outdated=&SB=n&SO=a&PP=50&do_Search=Ir}{Arch Linux}~\archlinux{} y FreeBSD~\freebsd{}.
+
+			      \note{
+				      Desarrollado con CMake, escrito en C++ con enlaces Python a través de pybind11.
+			      }
+
+			\item
+
+			      Conjunto de bibliotecas C++ con enlaces a Python.
+
+			\item
+
+			      Utilizado en la resolución de ecuaciones diferenciales parciales e implementación de métodos basados en mallas, por ejemplo diferencias finitas, elementos finitos o volúmenes finitos.
+		\end{itemize}
+		\note{
+			Se mostrará la estructura general, proyectos basados en DUNE y algunas simulaciones de modelos matemáticos que incluyen éste tipo de ecuaciones, así como una implementación breve de DUNE.
+		}
+	\end{alertblock}
 
 	\begin{figure}[ht!]
 		\centering
-		\includegraphics[height=4cm]{dunedesign}
-		\caption{Tomado de \url{https://dune-project.org}}
+		\includegraphics[height=4.2cm]{dunedesign}
+		\caption{Tomado de \url{https://dune-project.org}.}
 	\end{figure}
 
 \end{frame}
@@ -125,14 +175,14 @@
 		\begin{column}{0.5\textwidth}
 			\begin{figure}[ht!]
 				\centering
-				\includegraphics[width=7cm]{blood_girke}
-				\caption{Tomado de \url{https://dune-project.org}}
+				\includegraphics[width=7.5cm]{blood_girke}
+				\caption{Tomado de \url{https://dune-project.org}.}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\section{Curso de DUNE/PDELab (8/3/2021 - 12/3/2021)}
+\section{Curso de DUNE/PDELab $2021$}
 
 \begin{frame}[fragile]
 	\frametitle{\secname}
@@ -168,25 +218,23 @@
 \begin{frame}[plain]
 \end{frame}
 }
-\section{DUNE Latinoamérica}
-\begin{frame}
-	\frametitle{\secname}
-	\framesubtitle{Página para revisión de DUNE}
-	\begin{figure}[ht!]
-		\centering
-		\includegraphics[height=8cm, width=12cm]{cpp_review}
-	\end{figure}
-\end{frame}
 
-\begin{frame}
-	\frametitle{\secname}
-	\framesubtitle{Imágenes Docker en Achlinux}
-	\begin{figure}[ht!]
-		\centering
-		\includegraphics[height=8cm, width=12cm]{archiso}
-	\end{figure}
-\end{frame}
+%\section{DUNE Latinoamérica}
 
+{
+\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{cpp_review}}
+\begin{frame}[plain]
+\end{frame}
+}
+
+%\framesubtitle{Página para revisión de DUNE}
+%\framesubtitle{Imágenes Docker en Achlinux}
+
+{
+\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{archiso}}
+\begin{frame}[plain]
+\end{frame}
+}
 \subsection{Módulos}
 
 \begin{frame}
@@ -251,22 +299,23 @@
 
 \end{frame}
 \subsection{El DUNE verso: módulos}
+\subsection{Dependencias de algunos módulos}
 \begin{frame}
 	\frametitle{\secname}
 	\framesubtitle{\subsecname}
 
 	\begin{figure}[ht!]
 		\centering
-		\includegraphics[width=14.5cm]{dependences}
+		\includegraphics[width=14.6cm]{dependences}
 	\end{figure}
 
 	\begin{description}
 		\item[dune-common]
 
-		Clases fundamentales e infraestructura para la construcción del sistema.
+			Clases fundamentales e infraestructura para la construcción del sistema.
 
-		\note{contiene las clases base usadas por todos los módulos de DUNE-modules. Provee algunas clases de infraestructura para depuración y manejo de excepciones así como una librería para manejar una matriz densa.
-and vectors.}
+			\note{contiene las clases base usadas por todos los módulos de DUNE-modules. Provee algunas clases de infraestructura para depuración y manejo de excepciones así como una librería para manejar una matriz densa.
+				and vectors.}
 
 		\item[dune-geometry] Elementos de referencia, métodos de cuadratura y transformaciones geométricas.
 
@@ -274,7 +323,9 @@ and vectors.}
 
 		\item[dune-istl] Biblioteca de solucionadores iterativas de plantillas, clases genéricas de matrices/vectores dispersos, solucionadores
 
-		\item[dune-localfunctions] Interface genérica para funciones de elementos finitos.
+		\item[dune-localfunctions]
+
+			Interface genérica para funciones de elementos finitos.
 	\end{description}
 \end{frame}
 
