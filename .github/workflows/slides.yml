@@ -47,6 +47,7 @@ jobs:
       - name: "Tar files"
         run: |
           mkdir -p docs/public
+          ls -l build/doc/*.pdf
           mv build/doc/*.pdf docs/public
 
       - name: Deploy
