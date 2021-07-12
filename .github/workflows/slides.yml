@@ -46,11 +46,11 @@ jobs:
 
       - name: "Tar files"
         run: |
-          tar --zstd -cf PDF.tar.zst build/doc/*.pdf
+          mkdir -p docs/public
+          mv build/doc/*.pdf docs/public
 
-      - uses: actions/upload-artifact@v2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: PDF-artifact
-          path: PDF.tar.zst
-          if-no-files-found: error
-          retention-days: 90
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/public
