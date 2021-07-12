@@ -10,7 +10,6 @@ USAGE="Usage: run.sh"
 set -e -u
 echo "Bash version: $BASH_VERSION"
 # _number="$1"
-
 DIR=$(pwd)/build
 if [ -d "$DIR" ]; then
   printf '%s\n' "Removing Lock ($DIR)"
