@@ -38,8 +38,7 @@ jobs:
           run: |
             sudo -u aur yay -Syu texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber inkscape doxygen python-sphinx ttf-fira-code cmake --needed --noconfirm
             export PATH="/usr/bin/vendor_perl:$PATH"
-            sudo -E -u aur biber --version && cd /work && ls -l && pwd
-            #cd /work && ./run.sh
+            sudo -E -u aur biber --version && cd /work && ./run.sh && ls -l && pwd
 
       - name: Check pdf files
         run: |
