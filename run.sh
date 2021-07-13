@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # ------------------------------------------------------------------
-# Oromion Generate png from (LaTeX).
+# Oromion Generate the pdf (LaTeX).
 #          Description
 # ------------------------------------------------------------------
 VERSION=0.1.0
@@ -25,5 +25,5 @@ VISOR=zathura
 if hash ${VISOR} 2>/dev/null; then
   ${VISOR} doc/doc_dune-webinar_tex_source.pdf
 else
-  echo "No tiene el visor ${VISOR}"
+  echo "No está instalado el visor ${VISOR}"
 fi
