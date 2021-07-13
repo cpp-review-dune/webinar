@@ -46,7 +46,7 @@ jobs:
 
       - name: "Tar files"
         run: |
-          mkdir -p docs/public
+          sudo mkdir -p docs/public
           pwd
           ls -l
           ls -l build/doc/*.pdf
