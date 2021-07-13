@@ -46,8 +46,8 @@ jobs:
 
       - name: "Tar files"
         run: |
-          sudo chown runner:docker -R build/doc/*pdf
-          sudo chmod 777 -R build/doc/*pdf
+          sudo chown runner:docker -R build
+          sudo chmod 777 -R build
           mkdir -p docs/public
           pwd
           ls -l
