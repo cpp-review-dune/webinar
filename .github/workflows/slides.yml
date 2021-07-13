@@ -38,7 +38,7 @@ jobs:
           run: |
             sudo -u aur yay -Syu texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber inkscape doxygen python-sphinx ttf-fira-code cmake --needed --noconfirm
             export PATH="/usr/bin/vendor_perl:$PATH"
-            sudo -E -u aur biber --version && cd /work && ./run.sh && chown runner:docker -R build/doc/*pdf && ls -l build/doc/*pdf
+            sudo -E -u aur biber --version && cd /work && ./run.sh
 
       - name: Check pdf files
         run: |
@@ -46,6 +46,7 @@ jobs:
 
       - name: "Tar files"
         run: |
+          sudo chown runner:docker -R build/doc/*pdf
           mkdir -p docs/public
           pwd
           ls -l
