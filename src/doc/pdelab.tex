@@ -1,0 +1,60 @@
+\section{Curso de DUNE/PDELab $2021$}
+
+\begin{frame}[fragile]
+	\frametitle{\secname}
+	\framesubtitle{\url{https://dune-pdelab-course.readthedocs.io}}
+
+	\begin{figure}[ht!]
+		\centering
+		\href{https://dune-pdelab-course.readthedocs.io}{\includegraphics[height=8cm]{dune_course_2021}}
+	\end{figure}
+	\note{
+		Cursos de DUNE anuales, lista de correo de preguntas y noticias.
+
+		Cuenta con nueve tutoriales.
+		El módulo se llama dune-pdelab-tutorials, \url{https://gitlab.dune-project.org/pdelab/dune-pdelab-tutorials}, es el sucesor de dune-grid-howto \url{https://gitlab.dune-project.org/core/dune-grid-howto}
+	}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Snippet en C++}
+	\lstinputlisting[caption={Programa \texttt{dune-basics.cc}.},label=dune-basics.cc,]{dune-basics.cc}
+	\note{
+		Se muestra un código minimo de un programa basado en Dune.
+		La forma de trabajo es importar las clases con las directivas %\lstinline|#include <dune/modulo/cabecera.hh>|
+
+		\url{https://www.dune-project.org/sphinx/content/sphinx/dune-fem/mcf_nb.html}
+		Es una simulación dinámica.
+	}
+\end{frame}
+
+{
+\usebackgroundtemplate{
+	\centering
+	\includegraphics[width=\paperwidth]{tutorial-9}
+}
+
+\begin{frame}[plain]
+	\note{
+		Presentar el vídeo presenta la simulación de un flujo que obedece las ecuaciones de Navier Stokes, alrededor de un cilindro.
+	}
+\end{frame}
+}
+\begin{frame}[fragile]
+	\frametitle{Snippet en Python}
+	\begin{figure}[ht!]
+		\centering
+		\href{https://www.dune-project.org/sphinx/content/sphinx/dune-fem/mcf_nb.html}{\includegraphics[height=8cm]{python_code}}
+	\end{figure}
+
+\end{frame}
+
+{
+\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth]{jupyter01}}
+\begin{frame}[plain]
+	\note{
+		Mostrar el artículo de dune-Python \url{https://arxiv.org/abs/1807.05252}, página 11.
+		Los bindings de dune se encuentran en cada módulo, por ejemplo, dune-common, dune-geometry, dune-grid, dune-istl, etc, que depende de la instalación en C++ de dicho módulo.
+	}
+\end{frame}
+}
