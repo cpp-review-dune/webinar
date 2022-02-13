@@ -41,9 +41,9 @@ jobs:
           run: |
             yay -Syyuq $PACKAGES --needed --noconfirm
             export PATH="/usr/bin/vendor_perl:$PATH"
-            biber --version
             sudo chown -R builder:builder /work && cd /work && ./run.sh
             mkdir -p public && mv build/doc/*.pdf public
+            mv public/doc_dune-webinar_tex_source.pdf public/slides.pdf
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
