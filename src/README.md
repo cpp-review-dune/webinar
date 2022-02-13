@@ -1,16 +1,16 @@
 ## Esquema de la presentación
 
-- Introducción, presentación del libro.
+- Introducción, presentación del libro
 - Presentación de Dune Numerics y su relación con los modelos matemáticos.
-- Relación con los otros proyectos DuMux, OPM, FEniCS, entre otros.
-- Páginas de los proyectos y de las posibilidades.
-- Conceptos básicos de Dune.
+- Relación con los otros proyectos DuMux, OPM, FEniCS, entre otros
+- Páginas de los proyectos y de las posibilidades
+- Conceptos básicos de Dune
   - C++.
   - Python.
-- Ejemplos, completamente desarrollado.
-  - Malla adaptable, página web.
-  - Ecuación Poisson.
-  - Ecuación Navier-Stokes, solución dinámica con UFL.
+- Ejemplos, completamente desarrollado
+  - Malla adaptable, página web
+  - Ecuación Poisson
+  - Ecuación Navier-Stokes, solución dinámica con UFL
 - Códigos.
 
 ### Descripción general del webinar
