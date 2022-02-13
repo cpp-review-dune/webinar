@@ -25,5 +25,5 @@ VISOR=zathura
 if hash ${VISOR} 2>/dev/null; then
   ${VISOR} doc/doc_dune-webinar_tex_source.pdf
 else
-  echo "No está instalado el visor ${VISOR}"
+  echo "No está instalado el visor ${VISOR}."
 fi
