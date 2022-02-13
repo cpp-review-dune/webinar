@@ -42,22 +42,11 @@ jobs:
             yay -Syyuq $PACKAGES --needed --noconfirm
             export PATH="/usr/bin/vendor_perl:$PATH"
             biber --version
-            sudo chown -R builder:builder /work && cd /work
-            ./run.sh
-
-      - name: Check pdf files
-        run: |
-          find build/doc/ -type f -name "*.pdf" -exec file -- {} + | grep -q ' PDF '
-
-      - name: "Tar files"
-        run: |
-          sudo chown runner:docker -R build
-          mkdir -p docs/public
-          mv build/doc/*.pdf docs/public
-          mv docs/public/doc_dune-webinar_tex_source.pdf docs/public/slides.pdf
+            sudo chown -R builder:builder /work && cd /work && ./run.sh
+            mkdir -p public && mv build/doc/*.pdf public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/public
+          publish_dir: public
