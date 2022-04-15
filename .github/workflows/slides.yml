@@ -14,7 +14,7 @@ jobs:
   build_latex:
     runs-on: ubuntu-20.04
     env:
-      PACKAGES: "texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber inkscape doxygen python-sphinx ttf-fira-code cmake"
+      PACKAGES: "texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber gnu-free-fonts inkscape doxygen python-sphinx ttf-fira-code cmake"
 
     steps:
       - name: Partial Clone
