@@ -37,7 +37,7 @@ jobs:
           shell: bash
           run: |
             yay -Syyuq --needed --noconfirm
-            yay -S texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber gnu-free-fonts inkscape doxygen python-sphinx ttf-fira-code cmake
+            yay -S texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber gnu-free-fonts inkscape doxygen python-sphinx ttf-fira-code cmake --noconfirm
             export PATH="/usr/bin/vendor_perl:$PATH"
             sudo chown -R builder:builder /work && cd /work && ./run.sh
             mkdir -p public && mv build/doc/*.pdf public
