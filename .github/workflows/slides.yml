@@ -36,6 +36,7 @@ jobs:
             -v ${{github.workspace}}:/work
           shell: bash
           run: |
+            yay --version
             yay -Syu --needed --noconfirm texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber gnu-free-fonts inkscape doxygen python-sphinx ttf-fira-code cmake
             export PATH="/usr/bin/vendor_perl:$PATH"
             sudo chown -R builder:builder /work && cd /work && ./run.sh
