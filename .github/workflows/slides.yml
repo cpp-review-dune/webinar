@@ -13,8 +13,6 @@ on:
 jobs:
   build_latex:
     runs-on: ubuntu-20.04
-    env:
-      PACKAGES: "texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber gnu-free-fonts inkscape doxygen python-sphinx ttf-fira-code cmake"
 
     steps:
       - name: Partial Clone
@@ -36,10 +34,9 @@ jobs:
           image: ghcr.io/cpp-review-dune/introductory-review/aur:latest
           options: |
             -v ${{github.workspace}}:/work
-            -e PACKAGES
           shell: bash
           run: |
-            yay -Syu --needed --noconfirm ${PACKAGES}
+            yay -Syu --needed --noconfirm texlive-latexextra texlive-pictures texlive-science texlive-fontsextra texlive-bibtexextra biber inkscape doxygen python-sphinx ttf-fira-code cmake
             export PATH="/usr/bin/vendor_perl:$PATH"
             sudo chown -R builder:builder /work && cd /work && ./run.sh
             mkdir -p public && mv build/doc/*.pdf public
