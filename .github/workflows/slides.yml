@@ -39,7 +39,8 @@ jobs:
             -e PACKAGES
           shell: bash
           run: |
-            yay -Syyuq $PACKAGES --needed --noconfirm
+            env
+            yay -Syyuq ${PACKAGES} --needed --noconfirm
             export PATH="/usr/bin/vendor_perl:$PATH"
             sudo chown -R builder:builder /work && cd /work && ./run.sh
             mkdir -p public && mv build/doc/*.pdf public

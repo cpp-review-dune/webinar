@@ -1,3 +1,4 @@
+#!/usr/bin/env lua
 --timer.lua:
 sum = 0
 
