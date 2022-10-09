@@ -21,11 +21,11 @@
 
 		\item[\href{https://dune-project.org/modules/dune-grid/}{dune-grid}]
 
-			Interfaces con las mallas (\href{https://dune-project.org/modules/dune-alugrid}{ALUGrid}, \href{https://dune-project.org/modules/dune-uggrid}{UGGrid}, \href{https://dune-project.org/modules/dune-grid}{AlbertaGrid, YaspGrid}), construcción y visualización.
+			Interfaces con las mallas (\href{https://dune-project.org/modules/dune-alugrid}{ALUGrid}, \href{https://dune-project.org/modules/dune-uggrid}{UGGrid}, \href{https://dune-project.org/modules/dune-grid}{AlbertaGrid, YaspGrid}). % , construcción y visualización
 
 		\item[\href{https://dune-project.org/modules/dune-istl}{dune-istl}]
 
-			Biblioteca de solucionadores iterativas de plantillas, clases genéricas de matrices/vectores dispersos, solucionadores
+			Biblioteca de solucionadores iterativas de plantillas, clases genéricas de matrices/vectores dispersos.%, solucionadores
 
 		\item[\href{https://dune-project.org/modules/dune-localfunctions}{dune-localfunctions}]
 
@@ -52,65 +52,69 @@
 \begin{frame}
 	\frametitle{\secname}
 	\framesubtitle{\subsecname}
-
+	\small
 	\begin{columns}
 		\begin{column}{0.5\textwidth}
 			\dirtree{%
 				.1 dune-fem.
-				.2 dune-grid.
-				.3 dune-geometry.
-				.4 dune-common.
-			}
-
-			\
-
-			\
-
-			\dirtree{%
-				.1 dumux.
+				.2 dune-alugrid.
 				.2 dune-istl.
 				.2 dune-localfunctions.
-				.2 \href{https://github.com/VcDevel/Vc}{vc}.
-				.2 \href{http://numerik.mi.fu-berlin.de/dune/psurface/index.php}{psurface}.
-				.2 \href{https://github.com/xiaoyeli/superlu}{superlu}.
-				.2 \href{http://reuter.mit.edu/software/arpackpatch}{arpack++}.
 				.2 \href{http://faculty.cse.tamu.edu/davis/suitesparse.html}{suitesparse}.
-				.2 dune-alugrid.
-				.2 dune-subgrid.
-				.2 \href{https://fmt.dev}{fmt}.
-				.2 opm-common.
+				.2 \href{https://github.com/xiaoyeli/superlu}{superlu}.
+				.2 dune-polygongrid (opcional).
+				.2 dune-spgrid (opcional).
+				.2 \href{https://eigen.tuxfamily.org}{eigen} (opcional).
+				% .2 \href{http://icl.cs.utk.edu/papi}{papi} (opcional).
 			}
-		\end{column}
-
-		\begin{column}{0.5\textwidth}
-			\dirtree{%
-				.1 opm-upscaling.
-				.2 opm-grid.
-				.3 opm-common.
-				.4 dune-grid.
-				.5 dune-geometry.
-				.4 dune-istl.
-				.4 \href{https://www.boost.org}{boost}.
-			}
-
-			\
 
 			\
 
 			\dirtree{%
 				.1 opm-models.
+				.2 dune-alugrid.
+				.2 dune-istl.
+				.2 dune-localfunctions.
 				.2 opm-material.
 				.3 opm-common.
-				.4 dune-grid.
-				.5 dune-geometry.
-				.4 dune-istl.
-				.4 boost.
+				.4 \href{https://www.boost.org}{boost}.
+				.4 \href{https://fmt.dev}{fmt}.
+				.2 \href{http://faculty.cse.tamu.edu/davis/suitesparse.html}{suitesparse}.
+			}
+		\end{column}
+
+		\begin{column}{0.5\textwidth}
+			\dirtree{%
+				.1 dumux.
+				.2 dune-grid.
+				.2 dune-istl.
+				.2 dune-localfunctions.
+				.2 dune-alugrid (opcional).
+				.2 dune-foamgrid (opcional).
+				.2 dune-functions (opcional).
+				.2 dune-mmesh (opcional).
+				.2 dune-spgrid (opcional).
+				.2 dune-subgrid (opcional).
+				.2 opm-grid (opcional).
+			}
+
+			\
+
+			\dirtree{%
+				.1 dune-pdelab.
+				.2 \href{http://reuter.mit.edu/software/arpackpatch}{arpack++}.
+				.2 dune-alugrid.
+				.2 dune-functions.
+				.2 \href{http://faculty.cse.tamu.edu/davis/suitesparse.html}{suitesparse}.
+				.2 \href{https://github.com/xiaoyeli/superlu}{superlu}.
+				.2 dune-multidomaingrid (opcional).
 			}
 		\end{column}
 	\end{columns}
 
 	\note{
-		Aquí se puede ver la relación de dependencias entre los módulos de DUNE.
+		Aquí se puede ver la relación de dependencias entre los módulos
+		de Dune.
 	}
 
 \end{frame}
