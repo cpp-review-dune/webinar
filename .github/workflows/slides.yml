@@ -37,7 +37,7 @@ jobs:
           shell: bash
           run: |
             yay --repo --needed --noconfirm --noprogressbar -Syyuq
-            yay --noconfirm -S cmake texlive-latexextra texlive-langspanish texlive-fontsrecommended texlive-luatex ttf-fira-code texlive-fontsextra texlive-plaingeneric texlive-bibtexextra biber
+            yay --noconfirm -S cmake texlive-latexextra texlive-langspanish texlive-fontsrecommended texlive-luatex ttf-fira-code texlive-fontsextra texlive-plaingeneric texlive-bibtexextra biber texlive-binextra
             export PATH="/usr/bin/vendor_perl:$PATH"
             sudo chown -R builder:builder /work && cd /work && ./run.sh
             mkdir -p public && mv build/doc/*.pdf public
