@@ -13,6 +13,8 @@ on:
 jobs:
   build_latex:
     runs-on: ubuntu-20.04
+    env:
+      PACKAGES: "cmake texlive-latexextra texlive-langspanish texlive-fontsrecommended texlive-luatex ttf-fira-code texlive-fontsextra texlive-plaingeneric texlive-bibtexextra biber texlive-binextra"
 
     steps:
       - name: Partial Clone
@@ -36,8 +38,7 @@ jobs:
             -v ${{github.workspace}}:/work
           shell: bash
           run: |
-            yay --repo --needed --noconfirm --noprogressbar -Syyuq
-            yay --noconfirm -S cmake texlive-latexextra texlive-langspanish texlive-fontsrecommended texlive-luatex ttf-fira-code texlive-fontsextra texlive-plaingeneric texlive-bibtexextra biber texlive-binextra
+            yay --repo --needed --noconfirm --noprogressbar -Syyuq ${PACKAGES} >/dev/null 2>&1
             export PATH="/usr/bin/vendor_perl:$PATH"
             sudo chown -R builder:builder /work && cd /work && ./run.sh
             mkdir -p public && mv build/doc/*.pdf public
