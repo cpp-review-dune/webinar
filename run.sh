@@ -16,14 +16,19 @@ if [ -d "$DIR" ]; then
   rm -rf "$DIR"
 fi
 
-mkdir -p build && cd build
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release ../src
-make
+cmake \
+  -S src \
+  -B build \
+  -DCMAKE_BUILD_TYPE=Release \
+  -G "Unix Makefiles" \
+  -Wno-dev
+
+cmake --build build
 
 VISOR=zathura
 
 if hash ${VISOR} 2>/dev/null; then
-  ${VISOR} doc/doc_dune-webinar_tex_source.pdf
+  ${VISOR} build/doc/doc_dune-webinar_tex_source.pdf &
 else
   echo "No está instalado el visor ${VISOR}."
 fi
