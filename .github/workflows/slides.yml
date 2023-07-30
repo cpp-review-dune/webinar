@@ -12,7 +12,7 @@ on:
 
 jobs:
   build_latex:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       PACKAGES: "cmake texlive-latexextra texlive-langspanish texlive-fontsrecommended texlive-luatex ttf-fira-code texlive-fontsextra texlive-plaingeneric texlive-bibtexextra biber texlive-binextra"
       PATH: "/usr/bin/vendor_perl:$PATH"
