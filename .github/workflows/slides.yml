@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       PACKAGES: "cmake texlive-latexextra texlive-langspanish texlive-fontsrecommended texlive-luatex ttf-fira-code texlive-fontsextra texlive-plaingeneric texlive-bibtexextra biber texlive-binextra"
-      PATH: "/usr/bin/vendor_perl:$PATH"
 
     steps:
       - name: Partial Clone
@@ -41,6 +40,7 @@ jobs:
           run: |
             yay --repo --needed --noconfirm --noprogressbar -Syuq
             yay --repo --needed --noconfirm --noprogressbar -S ${PACKAGES} #>/dev/null 2>&1
+            export PATH=/usr/bin/vendor_perl:$PATH
             sudo chown -R builder:builder /work && cd /work && ./run.sh
             mkdir -p public && mv build/doc/*.pdf public
             mv public/doc_dune-webinar_tex_source.pdf public/slides.pdf
